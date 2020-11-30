@@ -21,9 +21,9 @@
           <nav>
             <div class="row">
               <div class="col-6">
-                <div class="logo d-flex align-items-center">
+                <div class="nav-logo d-flex align-items-center">
                   <a href="#">
-                    <img :src="'img/' + nav_logo.url + '.png'" :alt="nav_logo.alt">
+                    <img :src="'img/' + logo.url + '.png'" :alt="logo.alt">
                   </a>
                 </div>
               </div>
@@ -46,7 +46,7 @@
                 <div class="jumbo-info d-flex flex-column justify-content-center align-items-start">
                   <h1>{{page_title}}</h1>
                   <p>{{jumbo_slogan}}</p>
-                  <a href="#" class="btn">Learn more</a>
+                  <a class="btn" href="#">Learn more</a>
                 </div>
               </div>
               <div class="col-6">
@@ -59,61 +59,88 @@
         </div>  <!-- Closing Header container -->
       </header>
       <main>
-        <!-- Section 1: Pro-Barbers -->
-        <section id="pro-barbers">
-          <div class="container">
+        <div class="container">
+          <!-- Section 1: Pro-Barbers -->
+          <section id="pro-barbers">
             <div class="row">
               <div class="col-12"></div>
             </div>
-          </div>  <!-- Closing Section "Pro-Barbers" container -->
-        </section>
-        <!-- Section 2: Services -->
-        <section id="services">
-          <div class="container">
+          </section>
+          <!-- Section 2: Services -->
+          <section id="services">
             <div class="row">
               <div class="col-12"></div>
             </div>
-          </div>  <!-- Closing Section "Services"" container -->
-        </section>
-        <!-- Section 3: Products -->
-        <section id="products">
-          <div class="container">
+          </section>
+          <!-- Section 3: Products -->
+          <section id="products">
             <div class="row">
               <div class="col-12"></div>
             </div>
-          </div>  <!-- Closing Section "Products"" container -->
-        </section>
-        <!-- Section 4: Reviews -->
-        <section id="reviews">
-          <div class="container">
+          </section>
+          <!-- Section 4: Reviews -->
+          <section id="reviews">
             <div class="row">
               <div class="col-12"></div>
             </div>
-          </div>  <!-- Closing Section "Reviews"" container -->
-        </section>
-        <!-- Section 5: Blog Posts -->
-        <section id="blog-posts">
-          <div class="container">
+          </section>
+          <!-- Section 5: Blog Posts -->
+          <section id="blog-posts">
             <div class="row">
               <div class="col-12"></div>
             </div>
-          </div>  <!-- Closing Section "Blog -Posts"" container -->
-        </section>
+          </section>
+        </div>  <!-- Closing Main container -->
       </main>
       <footer>
         <div id="footer-top">
           <div class="container">
             <div class="row">
-              <div class="col-12"></div>
+              <div class="col-4">
+                <img :src="'img/' + footer_products_img.url + '.png'" :alt="footer_products_img.alt">
+                <a class="btn" href="#">Shop our range now</a>
+              </div>
+              <div class="col-4">
+                <img :src="'img/' + logo.url + '.png'" :alt="logo.alt">
+                <ul class="contacts">
+                  <li>{{footer_contacts.holder}}</li>
+                  <li>{{footer_contacts.address.street}}</li>
+                  <li>{{footer_contacts.address.city}}</li>
+                  <li>
+                    <a href="#">{{footer_contacts.email}}</a>
+                  </li>
+                  <li>{{footer_contacts.tel}}</li>
+                </ul>
+                <div class="social-media">
+                  <p>Follow us</p>
+                  <ul>
+                    <li v-for="(social, index) in footer_social_media">
+                      <a :href="footer_social_media[index].url">
+                        <i :class="'fab fa-' + footer_social_media[index].name"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-4">
+                <img :src="'img/' + footer_barber_img.url + '.png'" :alt="footer_barber_img.alt">
+                <a class="btn" href="#">Book your appointment</a>
+              </div>
             </div>
-          </div>  <!-- Closing Footer Top container -->
+          </div>  <!-- Closing Footer-top container -->
         </div>
         <div id="credits">
           <div class="container">
             <div class="row">
-              <div class="col-12"></div>
+              <div class="col-12">
+                <ul>
+                  <li v-for="(credit, index) in footer_credits">
+                    {{footer_credits[index]}}
+                  </li>
+                </ul>
+              </div>
             </div>
-          </div>  <!-- Closing Footer "Credits" container -->
+          </div>  <!-- Closing Footer Credits container -->
         </div>
       </footer>
     </div>  <!-- Closing #root (VUE JS) -->

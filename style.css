@@ -5,15 +5,15 @@ body {
 }
 
 h1 {
+  font-family: 'Yeseva One', cursive;
+  font-size: 42px;
   color: #eae8e6;
   padding-bottom: 20px;
   position: relative;
-  font-family: 'Yeseva One', cursive;
-  font-size: 42px;
 }
 
-a {
-  display: inline-block;
+ul {
+  list-style-type: none;
 }
 
 .btn {
@@ -31,7 +31,7 @@ a {
 header {
   width: 100%;
   background-color: black;
-  background-image: url('img/avadabarbers-homepage-hero-bg.jpg');
+  background-image: url('img/header_background.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -43,23 +43,23 @@ header nav {
   width: 100%;
 }
 
-nav .logo,
+nav .nav-logo,
 nav .nav-menu {
   height: 80px;
 }
 
-nav .logo img {
+.nav-logo img {
   height: 50px;
 }
 
 nav .nav-menu i {
   color: #eae8e6;
+  vertical-align: middle;
 }
 
 .nav-menu i[class*=fa-bars] {
   font-size: 20px;
   margin-left: 25px;
-  vertical-align:text-bottom;
 }
 
 /* Jumbotron */
@@ -101,9 +101,52 @@ header #jumbotron .jumbo-info,
 /* --------------------------- Footer --------------------------- */
 
 /* Footer Top */
+footer #footer-top {
+  background-color: #111110;
+}
+
+#footer-top ul.contacts {
+  padding: 20px 0;
+  color: #505050;
+}
+
+ul.contacts a {
+  color: #505050;
+}
+
+#footer-top .social-media > p {
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #ae8652;
+  padding-bottom: 20px;
+}
+
+#footer-top .social-media li {
+  display: inline-block;
+  padding: 0 10px;
+}
+
+#footer-top .social-media i {
+  color: #b0b0b0;
+}
 
 /* Footer Credits */
+footer #credits {
+  background-color: #191817;
+  color: #353333;
+  font-size: 16px;
+  font-weight: 700;
+}
 
+#credits li {
+  display: inline-block;
+  padding: 0 10px;
+  border-right: 1px solid #353333;
+}
+
+#credits li:last-child {
+  border-right: none;
+}
 
 /* ------------------- MEDIA QUERY ------------------- */
 
