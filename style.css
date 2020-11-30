@@ -6,6 +6,22 @@ body {
 
 h1 {
   color: #eae8e6;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+a {
+  display: block;
+}
+
+.btn {
+  color: #ae8652;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 600;
+  border: 2px solid #ae8652;
+  border-radius: 0;
+  padding: 10px 30px;
 }
 
 /* --------------------------- Header --------------------------- */
@@ -15,6 +31,7 @@ header {
   background-image: url('img/avadabarbers-homepage-hero-bg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
 
 /* Navbar */
@@ -29,22 +46,54 @@ nav .nav-menu {
 }
 
 nav .logo img {
-  height: 60px;
+  height: 50px;
 }
 
 nav .nav-menu i {
   color: #eae8e6;
 }
 
-nav .nav-menu i[class*=fa-bars] {
+.nav-menu i[class*=fa-bars] {
   font-size: 20px;
   margin-left: 20px;
 }
 
 /* Jumbotron */
 header #jumbotron {
-
+  width: 100%;
+  position: relative;
 }
+
+header #jumbotron .jumbo-info,
+#jumbotron .jumbo-img,
+.jumbo-img > img {
+  height: 100%;
+}
+
+.jumbo-info > h1::after {
+  content: '';
+  width: 25%;
+  height: 3px;
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  background-color: #ae8652;
+}
+
+.jumbo-info > p {
+  color: #505050;
+  font-weight: 300;
+  font-size: 18px;
+  padding: 15px 0;
+}
+
+#jumbotron .icons-right {
+  background-color: yellow;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
 
 /* --------------------------- Main --------------------------- */
 
