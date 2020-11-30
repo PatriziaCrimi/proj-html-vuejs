@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Barber Shop</title>
+    <title>Avada Barbers</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="img/png" href="img/favicon.png">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -16,22 +16,36 @@
     <div id="root">
       <!-- Header -->
       <header>
-        <!-- Navbar -->
-        <nav>
-          <div class="container">
+        <div class="container">
+          <!-- Navbar -->
+          <nav>
+            <div class="row">
+              <div class="col-6">
+                <div class="logo d-flex align-items-center">
+                  <a href="#">
+                    <img :src="'img/' + nav_logo.url + '.png'" :alt="nav_logo.alt">
+                  </a>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="nav-menu d-flex align-items-center justify-content-end">
+                  <a href="#">
+                    <i class="fas fa-shopping-cart"></i>
+                  </a>
+                  <a href="#">
+                    <i class="fas fa-bars"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </nav>
+          <!-- Jumbotron -->
+          <div id="jumbotron">
             <div class="row">
               <div class="col-12"></div>
             </div>
-          </div>  <!-- Closing Nav container -->
-        </nav>
-        <!-- Jumbotron -->
-        <div id="jumbotron">
-          <div class="container">
-            <div class="row">
-              <div class="col-12"></div>
-            </div>
-          </div>  <!-- Closing Jumbotron container -->
-        </div>
+          </div>
+        </div>  <!-- Closing Header container -->
       </header>
       <main>
         <!-- Section 1: Pro-Barbers -->

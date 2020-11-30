@@ -4,11 +4,47 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+h1 {
+  color: #eae8e6;
+}
+
 /* --------------------------- Header --------------------------- */
+header {
+  width: 100%;
+  background-color: black;
+  background-image: url('img/avadabarbers-homepage-hero-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 /* Navbar */
+header nav {
+  height: 80px;
+  width: 100%;
+}
+
+nav .logo,
+nav .nav-menu {
+  height: 80px;
+}
+
+nav .logo img {
+  height: 60px;
+}
+
+nav .nav-menu i {
+  color: #eae8e6;
+}
+
+nav .nav-menu i[class*=fa-bars] {
+  font-size: 20px;
+  margin-left: 20px;
+}
 
 /* Jumbotron */
+header #jumbotron {
+
+}
 
 /* --------------------------- Main --------------------------- */
 
@@ -27,3 +63,22 @@ body {
 /* Footer Top */
 
 /* Footer Credits */
+
+
+/* ------------------- MEDIA QUERY ------------------- */
+
+/* Breakpoint Small 576px sm */
+@media screen and (min-width: 576px) {
+}
+
+/* Breakpoint Medium 768px md */
+@media screen and (min-width: 768px) {
+}
+
+/* Breakpoint Large 992px lg */
+@media screen and (min-width: 992px) {
+}
+
+/* Breakpoint Extra Large 1200px xl */
+@media screen and (min-width: 1200px) {
+}
