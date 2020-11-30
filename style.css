@@ -1,27 +1,30 @@
 /* Common features */
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Lato', sans-serif; /* 100;300;400;700;900 */
 }
 
 h1 {
   color: #eae8e6;
   padding-bottom: 20px;
   position: relative;
+  font-family: 'Yeseva One', cursive;
+  font-size: 42px;
 }
 
 a {
-  display: block;
+  display: inline-block;
 }
 
 .btn {
   color: #ae8652;
   text-transform: uppercase;
   font-size: 15px;
-  font-weight: 600;
+  font-weight: 700;
   border: 2px solid #ae8652;
   border-radius: 0;
   padding: 10px 30px;
+  flex-grow: 0;
 }
 
 /* --------------------------- Header --------------------------- */
@@ -55,15 +58,11 @@ nav .nav-menu i {
 
 .nav-menu i[class*=fa-bars] {
   font-size: 20px;
-  margin-left: 20px;
+  margin-left: 25px;
+  vertical-align:text-bottom;
 }
 
 /* Jumbotron */
-header #jumbotron {
-  width: 100%;
-  position: relative;
-}
-
 header #jumbotron .jumbo-info,
 #jumbotron .jumbo-img,
 .jumbo-img > img {
@@ -86,14 +85,6 @@ header #jumbotron .jumbo-info,
   font-size: 18px;
   padding: 15px 0;
 }
-
-#jumbotron .icons-right {
-  background-color: yellow;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
 
 /* --------------------------- Main --------------------------- */
 
