@@ -59,38 +59,71 @@
         </div>  <!-- Closing Header container -->
       </header>
       <main>
-        <div class="container">
-          <!-- Section 1: Pro-Barbers -->
-          <section id="pro-barbers">
+        <!-- Section 1: Pro-Barbers -->
+        <section id="pro-barbers" class="text-center">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <h4>Award Winning</h4>
+                <h2>Pro Barbers</h2>
+                <a class="btn" href="#">Meet your new barber</a>
+              </div>
+            </div>
+          </div>  <!-- Closing "Section 1: Pro-Barbers" container -->
+        </section>
+        <!-- Section 2: Services -->
+        <section id="services">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 text-center">
+                <h4>Mens grooming</h4>
+                <h2>Services</h2>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-4 text-center">
+                <img src="img/trimcut_icon.png" alt="Trimcut icon">
+                <h3>Trim &amp; cut</h3>
+                <p>Avada Barbers are experts in the lickety split trim and hair cut. Quick but careful and ridiculously good looking.</p>
+              </div>
+              <div class="col-4 text-center">
+                <img src="img/washndry_icon.png" alt="Wash and dry icon">
+                <h3>Wash &amp; dry</h3>
+                <p>Take a seat in our fine leather chairs, lean back and let us lather you a fresh head in a luxurious fashion.</p>
+              </div>
+              <div class="col-4 text-center">
+                <img src="img/beardtrim_icon.png" alt="Beardtrim icon">
+                <h3>Beard Tidy</h3>
+                <p>Tame the tangles and untidy facial hairs like a gentleman with our Beard Tidy services from Avada BArbers.</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 text-center">
+                <a class="btn" href="#">Read about our services</a>
+              </div>
+            </div>
+          </div>  <!-- Closing "Section 2: Services" container -->
+        </section>
+        <!-- Section 3: Products -->
+        <section id="products">
+          <div class="row">
+            <div class="col-12"></div>
+          </div>
+        </section>
+        <!-- Section 4: Reviews -->
+        <section id="reviews">
+          <div class="row">
+            <div class="col-12"></div>
+          </div>
+        </section>
+        <!-- Section 5: Blog Posts -->
+        <section id="blog-posts">
+          <div class="container">
             <div class="row">
               <div class="col-12"></div>
             </div>
-          </section>
-          <!-- Section 2: Services -->
-          <section id="services">
-            <div class="row">
-              <div class="col-12"></div>
-            </div>
-          </section>
-          <!-- Section 3: Products -->
-          <section id="products">
-            <div class="row">
-              <div class="col-12"></div>
-            </div>
-          </section>
-          <!-- Section 4: Reviews -->
-          <section id="reviews">
-            <div class="row">
-              <div class="col-12"></div>
-            </div>
-          </section>
-          <!-- Section 5: Blog Posts -->
-          <section id="blog-posts">
-            <div class="row">
-              <div class="col-12"></div>
-            </div>
-          </section>
-        </div>  <!-- Closing Main container -->
+          </div>  <!-- Closing "Section 5: Blog Posts" container -->
+        </section>
       </main>
       <footer>
         <div id="footer-top">
@@ -115,7 +148,7 @@
                     <li>{{footer_contacts.tel}}</li>
                   </ul>
                   <div class="social-media">
-                    <p>Follow us</p>
+                    <h4>Follow us</h4>
                     <ul>
                       <li v-for="(social, index) in footer_social_media">
                         <a :href="footer_social_media[index].url">
