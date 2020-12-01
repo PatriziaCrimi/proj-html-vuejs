@@ -97,34 +97,40 @@
           <div class="container">
             <div class="row">
               <div class="col-4">
-                <img :src="'img/' + footer_products_img.url + '.png'" :alt="footer_products_img.alt">
-                <a class="btn" href="#">Shop our range now</a>
-              </div>
-              <div class="col-4">
-                <img :src="'img/' + logo.url + '.png'" :alt="logo.alt">
-                <ul class="contacts">
-                  <li>{{footer_contacts.holder}}</li>
-                  <li>{{footer_contacts.address.street}}</li>
-                  <li>{{footer_contacts.address.city}}</li>
-                  <li>
-                    <a href="#">{{footer_contacts.email}}</a>
-                  </li>
-                  <li>{{footer_contacts.tel}}</li>
-                </ul>
-                <div class="social-media">
-                  <p>Follow us</p>
-                  <ul>
-                    <li v-for="(social, index) in footer_social_media">
-                      <a :href="footer_social_media[index].url">
-                        <i :class="'fab fa-' + footer_social_media[index].name"></i>
-                      </a>
-                    </li>
-                  </ul>
+                <div class="shop-products d-flex flex-column justify-content-center align-items-center">
+                  <img :src="'img/' + footer_products_img.url + '.png'" :alt="footer_products_img.alt">
+                  <a class="btn" href="#">Shop our range now</a>
                 </div>
               </div>
               <div class="col-4">
-                <img :src="'img/' + footer_barber_img.url + '.png'" :alt="footer_barber_img.alt">
-                <a class="btn" href="#">Book your appointment</a>
+                <div class="contacts d-flex flex-column justify-content-center align-items-center text-center">
+                  <img :src="'img/' + logo.url + '.png'" :alt="logo.alt">
+                  <ul class="contact-info">
+                    <li>{{footer_contacts.holder}}</li>
+                    <li>{{footer_contacts.address.street}}</li>
+                    <li>{{footer_contacts.address.city}}</li>
+                    <li>
+                      <a href="#">{{footer_contacts.email}}</a>
+                    </li>
+                    <li>{{footer_contacts.tel}}</li>
+                  </ul>
+                  <div class="social-media">
+                    <p>Follow us</p>
+                    <ul>
+                      <li v-for="(social, index) in footer_social_media">
+                        <a :href="footer_social_media[index].url">
+                          <i :class="'fab fa-' + footer_social_media[index].name"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="book-appointment d-flex flex-column justify-content-center align-items-center">
+                  <img :src="'img/' + footer_barber_img.url + '.png'" :alt="footer_barber_img.alt">
+                  <a class="btn" href="#">Book your appointment</a>
+                </div>
               </div>
             </div>
           </div>  <!-- Closing Footer-top container -->
@@ -133,7 +139,7 @@
           <div class="container">
             <div class="row">
               <div class="col-12">
-                <ul>
+                <ul class="text-center">
                   <li v-for="(credit, index) in footer_credits">
                     {{footer_credits[index]}}
                   </li>

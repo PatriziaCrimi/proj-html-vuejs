@@ -105,12 +105,29 @@ footer #footer-top {
   background-color: #111110;
 }
 
-#footer-top ul.contacts {
-  padding: 20px 0;
-  color: #505050;
+#footer-top .contacts,
+#footer-top .shop-products,
+#footer-top .book-appointment {
+  padding: 60px 0;
 }
 
-ul.contacts a {
+#footer-top .shop-products img,
+#footer-top .book-appointment img {
+  height: 300px;
+  margin-bottom: 30px;
+}
+
+#footer-top .contacts img {
+  height: 60px;
+}
+
+.contacts ul.contact-info {
+  padding: 50px 0;
+  color: #505050;
+  padding-inline-start: 0;
+}
+
+ul.contact-info a {
   color: #505050;
 }
 
@@ -121,27 +138,38 @@ ul.contacts a {
   padding-bottom: 20px;
 }
 
-#footer-top .social-media li {
+.social-media > ul {
+  padding-inline-start: 0;
+}
+
+.social-media li {
   display: inline-block;
   padding: 0 10px;
 }
 
 #footer-top .social-media i {
   color: #b0b0b0;
+  font-size: 18px;
 }
 
 /* Footer Credits */
 footer #credits {
   background-color: #191817;
-  color: #353333;
+  color: #505050;
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 400;
+  padding: 40px 0;
+}
+
+footer #credits ul {
+  padding-inline-start: 0;
+  margin-bottom: 0;
 }
 
 #credits li {
   display: inline-block;
   padding: 0 10px;
-  border-right: 1px solid #353333;
+  border-right: 1px solid #505050;
 }
 
 #credits li:last-child {
