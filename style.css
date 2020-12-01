@@ -6,8 +6,8 @@ body {
 
 main section {
   width: 100%;
-  padding-top: 80px;
-  padding-bottom: 180px;
+  padding-top: 30px;
+  padding-bottom: 170px;
 }
 
 h1 {
@@ -37,6 +37,8 @@ h3 {
   font-weight: 600;
   letter-spacing: 1px;
   color: #ae8652;
+  padding: 35px;
+  margin: 0;
 }
 
 h4 {
@@ -45,6 +47,12 @@ h4 {
   font-weight: 900;
   letter-spacing: 1px;
   color: #ae8652;
+}
+
+p {
+  color: #88928f;
+  font-weight: 300;
+  font-size: 16px;
 }
 
 ul {
@@ -137,41 +145,75 @@ main section#pro-barbers {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center top;
+  padding-top: 80px;
   position: relative;
-}
-
-main section#pro-barbers::before,
-main section#pro-barbers::after {
-  content: '';
-  width: 50%;
-  height: 30%;
-  background-color: #fff;
-  border: 20px solid #fff;
-}
-
-main section#pro-barbers::before {
-  position: absolute;
-  bottom: -50px;
-  left: 0;
-  transform: skewY(-5deg);
-}
-
-main section#pro-barbers::after {
-  position: absolute;
-  bottom: -50px;
-  right: 0;
-  transform: skewY(5deg);
+  z-index: -2;
 }
 
 /* Section 2: Services */
 main section#services {
   background-color: #fff;
+  position: relative;
+}
+
+section#services::before,
+section#services::after {
+  content: '';
+  width: 50%;
+  border: 80px solid #fff;
+  z-index: -1;
+}
+
+section#services::before {
+  position: absolute;
+  top: -50px;
+  left: 0;
+  transform: skewY(-5deg);
+}
+
+section#services::after {
+  position: absolute;
+  top: -50px;
+  right: 0;
+  transform: skewY(5deg);
+}
+
+section#services .service-box {
+  width: 100%;
+  padding: 50px 25px;
+}
+
+.service-box > img {
+  height: 100px;
 }
 
 /* Section 3: Products */
 main section#products {
-
+  background-color: black;
+  position: relative;
 }
+
+main section#products::before,
+main section#products::after {
+  content: '';
+  width: 50%;
+  border: 80px solid black;
+}
+
+main section#products::before {
+  position: absolute;
+  top: -50px;
+  left: 0;
+  transform: skewY(-5deg);
+}
+
+main section#products::after {
+  position: absolute;
+  top: -50px;
+  right: 0;
+  transform: skewY(5deg);
+}
+
 /* Section 4: Reviews */
 main section#reviews {
 
