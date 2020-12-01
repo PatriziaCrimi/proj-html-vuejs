@@ -7,7 +7,7 @@ body {
 main section {
   width: 100%;
   padding-top: 80px;
-  padding-bottom: 150px;
+  padding-bottom: 180px;
 }
 
 h1 {
@@ -135,8 +135,8 @@ main section#pro-barbers {
   background-color: black;
   background-image: url('img/intro_background.jpg');
   background-size: cover;
-  background-repeat: repeat;
-  background-position: top;
+  background-repeat: no-repeat;
+  background-position: center top;
   position: relative;
 }
 
@@ -144,22 +144,21 @@ main section#pro-barbers::before,
 main section#pro-barbers::after {
   content: '';
   width: 50%;
-  color: #fff;
+  height: 30%;
+  background-color: #fff;
   border: 20px solid #fff;
-  /* border-left: 20px solid #fff; */
-  /* border-right: 20px solid #fff; */
 }
 
 main section#pro-barbers::before {
   position: absolute;
-  bottom: 0px;
+  bottom: -50px;
   left: 0;
   transform: skewY(-5deg);
 }
 
 main section#pro-barbers::after {
   position: absolute;
-  bottom: 0;
+  bottom: -50px;
   right: 0;
   transform: skewY(5deg);
 }
@@ -217,7 +216,7 @@ ul.contact-info a {
 
 #footer-top .social-media > h4 {
   padding-top: 10px;
-  padding-bottom: 30px;
+  padding-bottom: 35px;
 }
 
 .social-media > ul {
@@ -231,7 +230,7 @@ ul.contact-info a {
 
 #footer-top .social-media i {
   color: #b0b0b0;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 /* Footer Credits */
@@ -256,6 +255,20 @@ footer #credits ul {
 
 #credits li:last-child {
   border-right: none;
+}
+
+#credits .scroll-top {
+  background-color: #353333;
+  padding: 0 12px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  position: fixed;
+  bottom: 0;
+  right: 50px;
+}
+
+#credits .scroll-top > a {
+  color: #b0b0b0;
 }
 
 /* ------------------- MEDIA QUERY ------------------- */
