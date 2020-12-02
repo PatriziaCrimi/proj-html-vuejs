@@ -64,6 +64,10 @@ ul {
   padding-inline-start: 0;
 }
 
+a:hover {
+  text-decoration: none;
+}
+
 .btn {
   color: #ae8652;
   text-transform: uppercase;
@@ -78,8 +82,9 @@ ul {
 }
 
 .btn:hover {
-  color: #ffcf6a;
-  border: 2px solid #ffcf6a;
+  background-color: rgba(144, 105, 51, 0);
+  color: #906933;
+  border: 2px solid #906933;
 }
 
 /* --------------------------- Header --------------------------- */
@@ -119,6 +124,11 @@ nav .nav-menu {
 nav .nav-menu i {
   color: #eae8e6;
   vertical-align: middle;
+  transition: color 0.25s ease-in-out;
+}
+
+nav .nav-menu i:hover {
+  color: #ae8652;
 }
 
 .nav-menu i[class*=fa-bars],
@@ -224,11 +234,11 @@ section#services .service-box {
   padding: 50px 25px;
 }
 
-.service-box > img {
+.service-box > a > img {
   height: 100px;
 }
 
-.service-box > h3 {
+.service-box > a > h3 {
   padding: 35px;
 }
 
@@ -271,12 +281,17 @@ section#products .product-box {
   padding-bottom: 50px;
 }
 
-.product-box > img {
+.product-box > a {
+  display: block;
+  width: 100%;
+}
+
+.product-box > a > img {
   width: 100%;
   max-width: 400px;
 }
 
-.product-box > h3 {
+.product-box > a > h3 {
   padding-top: 20px;
   padding-bottom: 10px;
 }
@@ -382,17 +397,22 @@ main section#blog-posts {
   padding-bottom: 100px;
 }
 
-main section#blog-posts .blog-post {
+main section#blog-posts .post-box {
   width: 100%;
   padding: 30px;
 }
 
-.blog-post > img {
+.post-box > a {
+  display: block;
+  width: 100%;
+}
+
+.post-box > a > img {
   width: 100%;
   max-width: 300px;
 }
 
-.blog-post > h3 {
+.post-box > a > h3 {
   padding: 20px;
   line-height: 35px;
 }
@@ -424,7 +444,7 @@ footer #footer-top {
   width: 75%;
 }
 
-#footer-top .contacts img {
+#footer-top .contacts > a > img {  /* logo */
   height: 60px;
 }
 
@@ -475,7 +495,8 @@ footer #credits ul {
   border-right: none;
 }
 
-#credits .scroll-top {
+/* Footer Scroll Top */
+footer .scroll-top {
   background-color: #353333;
   padding: 0 12px;
   border-top-left-radius: 5px;
@@ -484,10 +505,21 @@ footer #credits ul {
   bottom: 0;
   right: 50px;
   z-index: 2;
+  transition: background-color 0.25s ease-in-out;
 }
 
-#credits .scroll-top > a {
+.scroll-top > a {
   color: #b0b0b0;
+  transition: color 0.25s ease-in-out;
+}
+
+footer .scroll-top:hover {
+  background-color: #be9359;
+  color: #fff;
+}
+
+footer .scroll-top:hover a {
+  color: #fff;
 }
 
 /* ------------------- MEDIA QUERY ------------------- */
