@@ -166,6 +166,19 @@ header #hamburger-menu {
 #hamburger-menu .active_bg > img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  animation-name: fadeIn;
+  animation-duration: 2s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+#hamburger-menu ul {
+  width: 40%;
+  margin: 0 auto;
 }
 
 #hamburger-menu li {
@@ -174,11 +187,13 @@ header #hamburger-menu {
   font-size: 30px;
   font-weight: 500;
   letter-spacing: 1px;
-  padding: 20px 0;
 }
 
 #hamburger-menu li > a {
   color: #fff;
+  display: inline-block;
+  height: 100%;
+  padding: 20px 0;
   transition: color 0.25s;
 }
 

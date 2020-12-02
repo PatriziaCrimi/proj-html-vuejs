@@ -48,7 +48,27 @@ let app = new Vue({
       },
       {
         url: 'about_bg',
+        description: 'Man being shaved detail',
+      },
+      {
+        url: 'services_bg',
+        description: 'Main having an haircut',
+      },
+      {
+        url: 'shop_bg',
+        description: 'Barber leather armchair',
+      },
+      {
+        url: 'products_bg',
         description: 'Man being shaved',
+      },
+      {
+        url: 'blog_bg',
+        description: 'Leather armchairs in barber shop',
+      },
+      {
+        url: 'contact_us_bg',
+        description: 'Barber tools',
       },
     ],
     jumbo_slogan: 'The Pinnacle of Male Grooming',
@@ -110,11 +130,11 @@ let app = new Vue({
         this.is_burger_active = true;
       }
     },
-    hoverItemBurger(current_index) {
+    activateItemBurger(current_index) {
       this.index_active_item = current_index;
       this.index_active_bg = this.index_active_item;
     },
-    leaveItemBurger() {
+    deactivateItemBurger() {
       this.index_active_item = '';
       this.index_active_bg = null;
     },

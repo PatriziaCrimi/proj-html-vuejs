@@ -49,9 +49,9 @@
           <div class="container">
             <div class="row">
               <div class="col-12">
-                <ul class="text-center">
+                <ul @mouseleave="deactivateItemBurger()" class="text-center">
                   <li v-for="(item, index) in burger_menu">
-                    <a @mouseenter="hoverItemBurger(index)" @mouseleave="leaveItemBurger()" :class="index_active_item === index ? 'active' : ''" :href="item.url">
+                    <a @mouseenter="activateItemBurger(index)" :class="index_active_item === index ? 'active' : ''" :href="item.url">
                       {{item.list_item}}
                     </a>
                   </li>
