@@ -4,6 +4,8 @@ let app = new Vue({
   el: '#root',
   data: {
     is_burger_active: false,
+    index_active_item: '',
+    index_active_bg: null,
     logo: {
       url: 'avadabarbers_logo',
       alt: 'Avada Barbers logo',
@@ -39,6 +41,16 @@ let app = new Vue({
         url: '#',
       },
     ],
+    burger_bg_list: [
+      {
+        url: 'home_bg',
+        description: 'Avada barber shop',
+      },
+      {
+        url: 'about_bg',
+        description: 'Man being shaved',
+      },
+    ],
     jumbo_slogan: 'The Pinnacle of Male Grooming',
     jumbo_img: {
       url: 'jumbotron_poster',
@@ -47,6 +59,10 @@ let app = new Vue({
     footer_products_img: {
       url: 'footer_products',
       alt: 'Shaving products',
+    },
+    footer_barber_img: {
+      url: 'footer_poster',
+      alt: 'Barber hairstyling',
     },
     footer_contacts: {
       holder: 'Avada Barbers',
@@ -57,25 +73,25 @@ let app = new Vue({
       email: 'info@yourwebsite.com',
       tel: '+1(555)555-1212',
     },
-    footer_barber_img: {
-      url: 'footer_poster',
-      alt: 'Barber hairstyling',
-    },
     footer_social_media: [
       {
-        name: 'facebook-f',
+        name: 'facebook',
+        code: '-f',
         url: '#',
       },
       {
         name: 'twitter',
+        code: '',
         url: '#',
       },
       {
         name: 'youtube',
+        code: '',
         url: '#',
       },
       {
         name: 'instagram',
+        code: '',
         url: '#',
       },
     ],
@@ -93,6 +109,20 @@ let app = new Vue({
       } else {
         this.is_burger_active = true;
       }
+    },
+    hoverItemBurger(current_index) {
+      this.index_active_item = current_index;
+      this.index_active_bg = this.index_active_item;
+    },
+    leaveItemBurger() {
+      this.index_active_item = '';
+      this.index_active_bg = null;
+    },
+    showName(current_index) {
+      this.index_active_item = current_index;
+    },
+    hideName() {
+      this.index_active_item = '';
     },
   },  // Closing methods
 });

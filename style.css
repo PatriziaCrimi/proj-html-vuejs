@@ -92,7 +92,7 @@ a:hover {
 header {
   width: 100%;
   background-color: black;
-  background-image: url('img/header_bg.jpg');
+  background-image: url('img/home_bg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -121,7 +121,11 @@ nav .nav-menu {
   height: 50px;
 }
 
-nav .nav-menu i {
+nav .nav-menu a {
+  margin-left: 25px;
+}
+
+nav .nav-menu a > i {
   color: #eae8e6;
   vertical-align: middle;
   transition: color 0.25s ease-in-out;
@@ -134,7 +138,6 @@ nav .nav-menu i:hover {
 .nav-menu i[class*=fa-bars],
 .nav-menu i[class*=fa-times] {
   font-size: 20px;
-  margin-left: 25px;
 }
 
 /* Hamburger menu */
@@ -148,6 +151,39 @@ header #hamburger-menu {
   top: 80px;
   left: 0;
   z-index: 2;
+}
+
+#hamburger-menu .active_bg {
+  width: 100%;
+  height: 100%;
+  min-width: 100vw;
+  min-height: 100vh;
+  position: absolute;
+  top: 0;
+  transform: translateY(-80px);
+}
+
+#hamburger-menu .active_bg > img {
+  width: 100%;
+  height: 100%;
+}
+
+#hamburger-menu li {
+  font-family: 'Yeseva One', cursive;
+  text-transform: capitalize;
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding: 20px 0;
+}
+
+#hamburger-menu li > a {
+  color: #fff;
+  transition: color 0.25s;
+}
+
+#hamburger-menu li > a.active {
+  color: #ae8652;
 }
 
 /* Jumbotron */
@@ -312,7 +348,8 @@ section#featured-product #featured-wrapper {
   height: 100%;
   border-top: 3px solid #ae8652;
   position: relative;
-  top: -50px;
+  top: 0;
+  transform: translateY(-15%);
 }
 
 #featured-wrapper::after {
@@ -464,12 +501,33 @@ ul.contact-info a {
 
 .social-media li {
   display: inline-block;
+  position: relative;
+}
+
+.social-media li > a {
+  display: inline-block;
   padding: 0 10px;
+  transition: opacity 0.2s;
+}
+
+.social-media li:hover a {
+  opacity: 0.7;
 }
 
 #footer-top .social-media i {
   color: #b0b0b0;
   font-size: 20px;
+}
+
+#footer-top .social-media small {
+  background-color: #353333;
+  color: #b0b0b0;
+  border-radius: 5px;
+  padding: 3px 8px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-20%, -120%);
 }
 
 /* Footer Credits */
@@ -498,17 +556,18 @@ footer #credits ul {
 /* Footer Scroll Top */
 footer .scroll-top {
   background-color: #353333;
-  padding: 0 12px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   position: fixed;
   bottom: 0;
   right: 50px;
   z-index: 2;
-  transition: background-color 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
 }
 
 .scroll-top > a {
+  display: block;
+  padding: 0 12px;
   color: #b0b0b0;
   transition: color 0.25s ease-in-out;
 }

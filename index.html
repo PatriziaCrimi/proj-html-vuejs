@@ -32,9 +32,9 @@
                   <a href="#">
                     <i class="fas fa-shopping-cart"></i>
                   </a>
-                  <a href="#">
-                    <i v-if="!is_burger_active" @click="toggleBurgerMenu()" class="fas fa-bars"></i>
-                    <i v-else @click="toggleBurgerMenu()" class="fas fa-times"></i>
+                  <a @click="toggleBurgerMenu()" href="#">
+                    <i v-if="!is_burger_active" class="fas fa-bars"></i>
+                    <i v-else class="fas fa-times"></i>
                   </a>
                 </div>
               </div>
@@ -43,12 +43,17 @@
         </nav>
         <!-- Hamburger menu -->
         <div id="hamburger-menu" v-if="is_burger_active">
+          <div v-if="index_active_item === index_active_bg" class="active_bg">
+            <img :src="'img/' + burger_bg_list[index_active_bg].url + '.jpg'" :alt="burger_bg_list[index_active_bg].description">
+          </div>
           <div class="container">
             <div class="row">
               <div class="col-12">
                 <ul class="text-center">
-                  <li v-for="item in burger_menu">
-                    <a :href="item.url">{{item.list_item}}</a>
+                  <li v-for="(item, index) in burger_menu">
+                    <a @mouseenter="hoverItemBurger(index)" @mouseleave="leaveItemBurger()" :class="index_active_item === index ? 'active' : ''" :href="item.url">
+                      {{item.list_item}}
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -312,10 +317,11 @@
                   <div class="social-media">
                     <h4>Follow us</h4>
                     <ul>
-                      <li v-for="social in footer_social_media">
+                      <li @mouseenter="showName(index)" @mouseleave="hideName()" v-for="(social, index) in footer_social_media">
                         <a :href="social.url">
-                          <i :class="'fab fa-' + social.name"></i>
+                          <i :class="'fab fa-' + social.name + social.code"></i>
                         </a>
+                        <small v-if="index_active_item === index">{{social.name}}</small>
                       </li>
                     </ul>
                   </div>
