@@ -3,11 +3,42 @@
 let app = new Vue({
   el: '#root',
   data: {
+    is_burger_active: false,
     logo: {
       url: 'avadabarbers_logo',
       alt: 'Avada Barbers logo',
     },
     page_title: 'Barber Shop',
+    burger_menu: [
+      {
+        list_item: 'Home',
+        url: '#',
+      },
+      {
+        list_item: 'About us',
+        url: '#',
+      },
+      {
+        list_item: 'Services',
+        url: '#',
+      },
+      {
+        list_item: 'Shop',
+        url: '#',
+      },
+      {
+        list_item: 'Our team',
+        url: '#',
+      },
+      {
+        list_item: 'Blog',
+        url: '#',
+      },
+      {
+        list_item: 'Contact us',
+        url: '#',
+      },
+    ],
     jumbo_slogan: 'The Pinnacle of Male Grooming',
     jumbo_img: {
       url: 'jumbotron_poster',
@@ -25,6 +56,10 @@ let app = new Vue({
       },
       email: 'info@yourwebsite.com',
       tel: '+1(555)555-1212',
+    },
+    footer_barber_img: {
+      url: 'footer_poster',
+      alt: 'Barber hairstyling',
     },
     footer_social_media: [
       {
@@ -44,10 +79,6 @@ let app = new Vue({
         url: '#',
       },
     ],
-    footer_barber_img: {
-      url: 'footer_poster',
-      alt: 'Barber hairstyling',
-    },
     footer_credits: [
       '\u00A9 Copyright 2012-2020', // \u00A9 JS unicode for © Copyright
       'Avada Theme by ThemeFusion',
@@ -56,6 +87,12 @@ let app = new Vue({
     ],
   },  // Closing data
   methods: {
-
+    toggleBurgerMenu() {
+      if(this.is_burger_active) {
+        this.is_burger_active = false;
+      } else {
+        this.is_burger_active = true;
+      }
+    },
   },  // Closing methods
 });
