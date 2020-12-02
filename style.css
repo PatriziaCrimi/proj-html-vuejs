@@ -285,6 +285,45 @@ section#products .product-box {
 /* Section 4: Featured Product */
 main section#featured-product {
   background-color: #fff;
+  padding-bottom: 30px;
+}
+
+section#featured-product #featured-wrapper {
+  width: 100%;
+  height: 100%;
+  border-top: 3px solid #ae8652;
+  position: relative;
+  top: -50px;
+}
+
+#featured-wrapper::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+#featured-wrapper .product-poster {
+  height: 100%;
+  width: 35%;
+  background-image: url('img/featured_bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  float: left;
+}
+
+#featured-wrapper .product-poster > img {
+  width: 100%;
+  max-width: 900px;
+  padding: 30px;
+}
+
+#featured-wrapper .product-info {
+  height: 100%;
+  width: 65%;
+  background-color: #191817;
+  padding: 50px;
+  float: left;
 }
 
 /* Section 5: Reviews */
