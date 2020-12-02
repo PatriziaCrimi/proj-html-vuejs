@@ -6,7 +6,7 @@ body {
 
 main section {
   width: 100%;
-  padding-top: 30px;
+  padding-top: 40px;
   padding-bottom: 170px;
 }
 
@@ -17,27 +17,31 @@ h1 {
   letter-spacing: 1px;
   color: #eae8e6;
   padding-bottom: 20px;
+  text-shadow: 1px 1px #505050;
   position: relative;
 }
 
 h2 {
   font-family: 'Yeseva One', cursive;
+  text-transform: capitalize;
   font-size: 44px;
   font-weight: 600;
   letter-spacing: 1px;
   color: #b0b0b0;
   padding-top: 5px;
   padding-bottom: 20px;
+  text-shadow: 1px 1px #505050;
+  position: relative;
+  z-index: 1;
 }
 
 h3 {
-  text-transform: capitalize;
   font-family: 'Yeseva One', cursive;
+  text-transform: capitalize;
   font-size: 22px;
   font-weight: 600;
   letter-spacing: 1px;
   color: #ae8652;
-  padding: 35px;
   margin: 0;
 }
 
@@ -47,6 +51,8 @@ h4 {
   font-weight: 900;
   letter-spacing: 1px;
   color: #ae8652;
+  position: relative;
+  z-index: 1;
 }
 
 p {
@@ -81,7 +87,7 @@ ul {
 header {
   width: 100%;
   background-color: black;
-  background-image: url('img/header_background.jpg');
+  background-image: url('img/header_bg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -141,13 +147,12 @@ header #jumbotron .jumbo-info,
 /* Section 1: Pro-Barbers */
 main section#pro-barbers {
   background-color: black;
-  background-image: url('img/intro_background.jpg');
+  background-image: url('img/pro_barbers_bg.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center top;
   padding-top: 80px;
   position: relative;
-  z-index: -2;
 }
 
 /* Section 2: Services */
@@ -160,8 +165,7 @@ section#services::before,
 section#services::after {
   content: '';
   width: 50%;
-  border: 80px solid #fff;
-  z-index: -1;
+  border: 50px solid #fff;
 }
 
 section#services::before {
@@ -187,31 +191,58 @@ section#services .service-box {
   height: 100px;
 }
 
+.service-box > h3 {
+padding: 35px;
+}
+
 /* Section 3: Products */
 main section#products {
   background-color: black;
+  background-image: url('img/products_bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   position: relative;
 }
 
-main section#products::before,
-main section#products::after {
+section#products::before,
+section#products::after {
   content: '';
   width: 50%;
-  border: 80px solid black;
+  border: 50px solid #141414;
 }
 
-main section#products::before {
+section#products::before {
   position: absolute;
   top: -50px;
   left: 0;
   transform: skewY(-5deg);
 }
 
-main section#products::after {
+section#products::after {
   position: absolute;
   top: -50px;
   right: 0;
   transform: skewY(5deg);
+}
+
+section#products .product-box {
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 50px;
+}
+
+section#products .product-box > img {
+  height: 250px;
+}
+
+section#products .product-box > h3 {
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+section#products .product-box > p {
+  color: #ae8d67;
 }
 
 /* Section 4: Reviews */
@@ -325,6 +356,10 @@ footer #credits ul {
 
 /* Breakpoint Large 992px lg */
 @media screen and (min-width: 992px) {
+}
+
+/* Breakpoint 1100px */
+@media screen and (min-width: 1100px) {
 }
 
 /* Breakpoint Extra Large 1200px xl */
