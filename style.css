@@ -396,6 +396,10 @@ section#featured-product #featured-wrapper {
   float: left;
 }
 
+#featured-wrapper .product-info p {
+  padding-bottom: 20px;
+}
+
 /* Section 5: Reviews */
 main section#reviews {
   background-color: #fff;
@@ -466,7 +470,7 @@ main section#blog-posts .post-box {
 }
 
 .post-box > a > h3 {
-  padding: 20px;
+  padding: 20px 0;
   line-height: 35px;
 }
 
@@ -498,7 +502,7 @@ footer #footer-top {
 }
 
 #footer-top .contacts > a > img {  /* logo */
-  height: 60px;
+  height: 40px;
 }
 
 .contacts ul.contact-info {
@@ -522,7 +526,7 @@ ul.contact-info a {
 
 .social-media li > a {
   display: inline-block;
-  padding: 0 10px;
+  padding: 0 5px;
   transition: opacity 0.2s;
 }
 
@@ -532,7 +536,7 @@ ul.contact-info a {
 
 #footer-top .social-media i {
   color: #b0b0b0;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 #footer-top .social-media small {
@@ -583,7 +587,7 @@ footer .scroll-top {
 
 .scroll-top > a {
   display: block;
-  padding: 0 12px;
+  padding: 4px 16px;
   color: #b0b0b0;
   transition: color 0.25s ease-in-out;
 }
@@ -634,6 +638,14 @@ footer .scroll-top:hover a {
   main section#reviews .review-box {
     padding: 20px 0;
   }
+
+  #footer-top .social-media li > a {
+    padding: 0 8px;
+  }
+
+  #footer-top .social-media i {
+    font-size: 20px;
+  }
 }
 
 /* Breakpoint Medium 768px md */
@@ -674,10 +686,29 @@ footer .scroll-top:hover a {
   main section#reviews .review-box {
     padding: 40px 10px 20px;
   }
+
+  main section#blog-posts .post-box {
+    padding: 50px 15px;
+  }
+
+  #footer-top .contacts > a > img {  /* logo */
+    height: 60px;
+  }
+
+  #footer-top .social-media li > a {
+    padding: 0 10px;
+  }
 }
 
 /* Breakpoint Large 992px lg */
 @media screen and (min-width: 992px) {
+  .scroll-top > a {
+    padding: 7px 20px;
+  }
+
+  .scroll-top > a > i {
+    font-size: 20px;
+  }
 }
 
 /* Breakpoint 1100px */
@@ -748,5 +779,17 @@ footer .scroll-top:hover a {
 
   .review-box > img {
     margin: 15px 0;
+  }
+
+  main section#blog-posts .post-box {
+    padding: 70px 15px;
+  }
+
+  #footer-top .social-media li > a {
+    padding: 0 12px;
+  }
+
+  #footer-top .social-media i {
+    font-size: 22px;
   }
 }
